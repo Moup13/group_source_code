@@ -1,0 +1,8 @@
+ public static createJazoest(input: string): string {
+    const buf = Buffer.from(input, 'ascii');
+    let sum = 0;
+    for (let i = 0; i < buf.byteLength; i++) {
+      sum += buf.readUInt8(i);
+    }
+    return `2${sum}`;
+  }
